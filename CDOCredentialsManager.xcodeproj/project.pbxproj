@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4909788F192AE111004CA527 /* libCDOCredentialsManager.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 49C046FB19186710008ED9BC /* libCDOCredentialsManager.a */; };
 		49C046FF19186710008ED9BC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49C046FE19186710008ED9BC /* Foundation.framework */; };
 		49C0470419186710008ED9BC /* CDOCredentialsManager.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 49C0470319186710008ED9BC /* CDOCredentialsManager.h */; };
 		49C0470619186710008ED9BC /* CDOCredentialsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 49C0470519186710008ED9BC /* CDOCredentialsManager.m */; };
@@ -20,11 +21,28 @@
 		49C0476219187D64008ED9BC /* NSData+AES128Crypto.m in Sources */ = {isa = PBXBuildFile; fileRef = 49C0476119187D64008ED9BC /* NSData+AES128Crypto.m */; };
 		49C04764191885B5008ED9BC /* test-crypto.json in Resources */ = {isa = PBXBuildFile; fileRef = 49C04763191885B5008ED9BC /* test-crypto.json */; };
 		49C047671921AEF6008ED9BC /* NSString+AESCrypto.m in Sources */ = {isa = PBXBuildFile; fileRef = 49C047661921AEF6008ED9BC /* NSString+AESCrypto.m */; };
+		49D73DA3192AD0590099295C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49C046FE19186710008ED9BC /* Foundation.framework */; };
+		49D73DA4192AD0590099295C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49C0472A19186767008ED9BC /* CoreGraphics.framework */; };
+		49D73DA5192AD0590099295C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49C0470F19186710008ED9BC /* UIKit.framework */; };
+		49D73DAB192AD0590099295C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 49D73DA9192AD0590099295C /* InfoPlist.strings */; };
+		49D73DAD192AD0590099295C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 49D73DAC192AD0590099295C /* main.m */; };
+		49D73DB1192AD0590099295C /* CDOAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 49D73DB0192AD0590099295C /* CDOAppDelegate.m */; };
+		49D73DB9192AD0590099295C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49D73DB8192AD0590099295C /* Images.xcassets */; };
+		49D73DD5192AD0DD0099295C /* CDOMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49D73DD3192AD0DD0099295C /* CDOMainViewController.m */; };
+		49D73DD6192AD0DD0099295C /* CDOMainView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 49D73DD4192AD0DD0099295C /* CDOMainView.xib */; };
+		49D73DD9192ADACD0099295C /* test-crypto.json in Resources */ = {isa = PBXBuildFile; fileRef = 49C04763191885B5008ED9BC /* test-crypto.json */; };
 		78FB7FB035C84932B9B7B885 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 513D20E105B248249DD1DC6F /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		49C0471119186710008ED9BC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 49C046F319186710008ED9BC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 49C046FA19186710008ED9BC;
+			remoteInfo = CDOCredentialsManager;
+		};
+		49D73DD7192ADA8C0099295C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 49C046F319186710008ED9BC /* Project object */;
 			proxyType = 1;
@@ -59,19 +77,6 @@
 		49C0471819186710008ED9BC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		49C0471A19186710008ED9BC /* CDOCredentialsManagerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CDOCredentialsManagerTests.m; sourceTree = "<group>"; };
 		49C0472A19186767008ED9BC /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		49C0472F19186767008ED9BC /* CDOCredentialsManagerDemo-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CDOCredentialsManagerDemo-Info.plist"; sourceTree = "<group>"; };
-		49C0473119186767008ED9BC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		49C0473319186767008ED9BC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		49C0473519186767008ED9BC /* CDOCredentialsManagerDemo-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CDOCredentialsManagerDemo-Prefix.pch"; sourceTree = "<group>"; };
-		49C0473619186767008ED9BC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		49C0473719186767008ED9BC /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		49C0473A19186767008ED9BC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		49C0473C19186767008ED9BC /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		49C0473D19186767008ED9BC /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		49C0473F19186767008ED9BC /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		49C0474D19186767008ED9BC /* CDOCredentialsManagerDemoTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CDOCredentialsManagerDemoTests-Info.plist"; sourceTree = "<group>"; };
-		49C0474F19186767008ED9BC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		49C0475119186767008ED9BC /* CDOCredentialsManagerDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CDOCredentialsManagerDemoTests.m; sourceTree = "<group>"; };
 		49C0475B19186850008ED9BC /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		49C0475D1918688B008ED9BC /* libcommonCrypto.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libcommonCrypto.dylib; path = usr/lib/system/libcommonCrypto.dylib; sourceTree = SDKROOT; };
 		49C0476019187D64008ED9BC /* NSData+AES128Crypto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+AES128Crypto.h"; sourceTree = "<group>"; };
@@ -79,6 +84,17 @@
 		49C04763191885B5008ED9BC /* test-crypto.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "test-crypto.json"; sourceTree = "<group>"; };
 		49C047651921AEF6008ED9BC /* NSString+AESCrypto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+AESCrypto.h"; sourceTree = "<group>"; };
 		49C047661921AEF6008ED9BC /* NSString+AESCrypto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+AESCrypto.m"; sourceTree = "<group>"; };
+		49D73DA2192AD0590099295C /* CDOCredentialsManagerDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CDOCredentialsManagerDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		49D73DA8192AD0590099295C /* CDOCredentialsManagerDemo-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CDOCredentialsManagerDemo-Info.plist"; sourceTree = "<group>"; };
+		49D73DAA192AD0590099295C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		49D73DAC192AD0590099295C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		49D73DAE192AD0590099295C /* CDOCredentialsManagerDemo-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CDOCredentialsManagerDemo-Prefix.pch"; sourceTree = "<group>"; };
+		49D73DAF192AD0590099295C /* CDOAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CDOAppDelegate.h; sourceTree = "<group>"; };
+		49D73DB0192AD0590099295C /* CDOAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CDOAppDelegate.m; sourceTree = "<group>"; };
+		49D73DB8192AD0590099295C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		49D73DD2192AD0DD0099295C /* CDOMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDOMainViewController.h; sourceTree = "<group>"; };
+		49D73DD3192AD0DD0099295C /* CDOMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDOMainViewController.m; sourceTree = "<group>"; };
+		49D73DD4192AD0DD0099295C /* CDOMainView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CDOMainView.xib; sourceTree = "<group>"; };
 		513D20E105B248249DD1DC6F /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		88D5A269CB424C098811BFFF /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -105,6 +121,17 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		49D73D9F192AD0590099295C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4909788F192AE111004CA527 /* libCDOCredentialsManager.a in Frameworks */,
+				49D73DA4192AD0590099295C /* CoreGraphics.framework in Frameworks */,
+				49D73DA5192AD0590099295C /* UIKit.framework in Frameworks */,
+				49D73DA3192AD0590099295C /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -113,8 +140,7 @@
 			children = (
 				49C0470019186710008ED9BC /* CDOCredentialsManager */,
 				49C0471419186710008ED9BC /* CDOCredentialsManagerTests */,
-				49C0472D19186767008ED9BC /* CDOCredentialsManagerDemo */,
-				49C0474B19186767008ED9BC /* CDOCredentialsManagerDemoTests */,
+				49D73DA6192AD0590099295C /* CDOCredentialsManagerDemo */,
 				49C046FD19186710008ED9BC /* Frameworks */,
 				49C046FC19186710008ED9BC /* Products */,
 				88D5A269CB424C098811BFFF /* Pods.xcconfig */,
@@ -126,6 +152,7 @@
 			children = (
 				49C046FB19186710008ED9BC /* libCDOCredentialsManager.a */,
 				49C0470B19186710008ED9BC /* CDOCredentialsManagerTests.xctest */,
+				49D73DA2192AD0590099295C /* CDOCredentialsManagerDemo.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -182,49 +209,6 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		49C0472D19186767008ED9BC /* CDOCredentialsManagerDemo */ = {
-			isa = PBXGroup;
-			children = (
-				49C0473619186767008ED9BC /* AppDelegate.h */,
-				49C0473719186767008ED9BC /* AppDelegate.m */,
-				49C0473919186767008ED9BC /* Main.storyboard */,
-				49C0473C19186767008ED9BC /* ViewController.h */,
-				49C0473D19186767008ED9BC /* ViewController.m */,
-				49C0473F19186767008ED9BC /* Images.xcassets */,
-				49C0472E19186767008ED9BC /* Supporting Files */,
-			);
-			path = CDOCredentialsManagerDemo;
-			sourceTree = "<group>";
-		};
-		49C0472E19186767008ED9BC /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				49C0472F19186767008ED9BC /* CDOCredentialsManagerDemo-Info.plist */,
-				49C0473019186767008ED9BC /* InfoPlist.strings */,
-				49C0473319186767008ED9BC /* main.m */,
-				49C0473519186767008ED9BC /* CDOCredentialsManagerDemo-Prefix.pch */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		49C0474B19186767008ED9BC /* CDOCredentialsManagerDemoTests */ = {
-			isa = PBXGroup;
-			children = (
-				49C0475119186767008ED9BC /* CDOCredentialsManagerDemoTests.m */,
-				49C0474C19186767008ED9BC /* Supporting Files */,
-			);
-			path = CDOCredentialsManagerDemoTests;
-			sourceTree = "<group>";
-		};
-		49C0474C19186767008ED9BC /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				49C0474D19186767008ED9BC /* CDOCredentialsManagerDemoTests-Info.plist */,
-				49C0474E19186767008ED9BC /* InfoPlist.strings */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
 		49C0475F19187CD6008ED9BC /* Categories */ = {
 			isa = PBXGroup;
 			children = (
@@ -234,6 +218,31 @@
 				49C047661921AEF6008ED9BC /* NSString+AESCrypto.m */,
 			);
 			name = Categories;
+			sourceTree = "<group>";
+		};
+		49D73DA6192AD0590099295C /* CDOCredentialsManagerDemo */ = {
+			isa = PBXGroup;
+			children = (
+				49D73DAF192AD0590099295C /* CDOAppDelegate.h */,
+				49D73DB0192AD0590099295C /* CDOAppDelegate.m */,
+				49D73DB8192AD0590099295C /* Images.xcassets */,
+				49D73DA7192AD0590099295C /* Supporting Files */,
+				49D73DD2192AD0DD0099295C /* CDOMainViewController.h */,
+				49D73DD3192AD0DD0099295C /* CDOMainViewController.m */,
+				49D73DD4192AD0DD0099295C /* CDOMainView.xib */,
+			);
+			path = CDOCredentialsManagerDemo;
+			sourceTree = "<group>";
+		};
+		49D73DA7192AD0590099295C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				49D73DA8192AD0590099295C /* CDOCredentialsManagerDemo-Info.plist */,
+				49D73DA9192AD0590099295C /* InfoPlist.strings */,
+				49D73DAC192AD0590099295C /* main.m */,
+				49D73DAE192AD0590099295C /* CDOCredentialsManagerDemo-Prefix.pch */,
+			);
+			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -276,6 +285,24 @@
 			productReference = 49C0470B19186710008ED9BC /* CDOCredentialsManagerTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		49D73DA1192AD0590099295C /* CDOCredentialsManagerDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 49D73DCC192AD05A0099295C /* Build configuration list for PBXNativeTarget "CDOCredentialsManagerDemo" */;
+			buildPhases = (
+				49D73D9E192AD0590099295C /* Sources */,
+				49D73D9F192AD0590099295C /* Frameworks */,
+				49D73DA0192AD0590099295C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				49D73DD8192ADA8C0099295C /* PBXTargetDependency */,
+			);
+			name = CDOCredentialsManagerDemo;
+			productName = CDOCredentialsManagerDemo;
+			productReference = 49D73DA2192AD0590099295C /* CDOCredentialsManagerDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -286,7 +313,10 @@
 				ORGANIZATIONNAME = Clamdango;
 				TargetAttributes = {
 					49C0470A19186710008ED9BC = {
-						TestTargetID = 49C0472719186767008ED9BC;
+						TestTargetID = 49D73DA1192AD0590099295C;
+					};
+					49D73DA1192AD0590099295C = {
+						DevelopmentTeam = FA5W6TJ34U;
 					};
 				};
 			};
@@ -305,6 +335,7 @@
 			targets = (
 				49C046FA19186710008ED9BC /* CDOCredentialsManager */,
 				49C0470A19186710008ED9BC /* CDOCredentialsManagerTests */,
+				49D73DA1192AD0590099295C /* CDOCredentialsManagerDemo */,
 			);
 		};
 /* End PBXProject section */
@@ -316,6 +347,17 @@
 			files = (
 				49C0471919186710008ED9BC /* InfoPlist.strings in Resources */,
 				49C04764191885B5008ED9BC /* test-crypto.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		49D73DA0192AD0590099295C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				49D73DB9192AD0590099295C /* Images.xcassets in Resources */,
+				49D73DD6192AD0DD0099295C /* CDOMainView.xib in Resources */,
+				49D73DD9192ADACD0099295C /* test-crypto.json in Resources */,
+				49D73DAB192AD0590099295C /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -373,6 +415,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		49D73D9E192AD0590099295C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				49D73DD5192AD0DD0099295C /* CDOMainViewController.m in Sources */,
+				49D73DAD192AD0590099295C /* main.m in Sources */,
+				49D73DB1192AD0590099295C /* CDOAppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -380,6 +432,11 @@
 			isa = PBXTargetDependency;
 			target = 49C046FA19186710008ED9BC /* CDOCredentialsManager */;
 			targetProxy = 49C0471119186710008ED9BC /* PBXContainerItemProxy */;
+		};
+		49D73DD8192ADA8C0099295C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 49C046FA19186710008ED9BC /* CDOCredentialsManager */;
+			targetProxy = 49D73DD7192ADA8C0099295C /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -392,26 +449,10 @@
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
-		49C0473019186767008ED9BC /* InfoPlist.strings */ = {
+		49D73DA9192AD0590099295C /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				49C0473119186767008ED9BC /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		49C0473919186767008ED9BC /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				49C0473A19186767008ED9BC /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		49C0474E19186767008ED9BC /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				49C0474F19186767008ED9BC /* en */,
+				49D73DAA192AD0590099295C /* en */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -579,6 +620,56 @@
 			};
 			name = Release;
 		};
+		49D73DCD192AD05A0099295C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CDOCredentialsManagerDemo/CDOCredentialsManagerDemo-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "CDOCredentialsManagerDemo/CDOCredentialsManagerDemo-Info.plist";
+				OTHER_LDFLAGS = (
+					"-all_load",
+					"-ObjC",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		49D73DCE192AD05A0099295C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CDOCredentialsManagerDemo/CDOCredentialsManagerDemo-Prefix.pch";
+				INFOPLIST_FILE = "CDOCredentialsManagerDemo/CDOCredentialsManagerDemo-Info.plist";
+				OTHER_LDFLAGS = (
+					"-all_load",
+					"-ObjC",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -605,6 +696,15 @@
 			buildConfigurations = (
 				49C0472219186710008ED9BC /* Debug */,
 				49C0472319186710008ED9BC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		49D73DCC192AD05A0099295C /* Build configuration list for PBXNativeTarget "CDOCredentialsManagerDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				49D73DCD192AD05A0099295C /* Debug */,
+				49D73DCE192AD05A0099295C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

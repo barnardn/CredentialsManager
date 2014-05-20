@@ -48,17 +48,22 @@ static NSString * const kKeymasterCypherTextKey = @"cypherText";
     return [SSKeychain passwordForService:self.serviceName account:accountName];
 }
 
-- (NSArray *)allAccountNames;
+- (NSArray *)allAccounts;
 {
-    return [SSKeychain allAccounts];
+    NSArray *accounts = [SSKeychain allAccounts];
+    NSMutableArray *accountNames = [NSMutableArray arrayWithCapacity:accounts.count];
+    for (NSDictionary *ci in accounts) {
+        [accountNames addObject:ci[kSSKeychainAccountKey]];
+    }
+    return accountNames;
 }
 
 - (void)purgeAllAccounts
 {
-    NSArray *accounts = [self allAccountNames];
+    NSArray *accounts = [self allAccounts];
     [accounts enumerateObjectsUsingBlock:^(NSDictionary *acct, NSUInteger idx, BOOL *stop) {
-       
-        [self deleteCredentialsForAccountName:acct[@"acct"]];
+
+        [self deleteCredentialsForAccountName:acct[kSSKeychainAccountKey]];
         
     }];
 }
@@ -145,7 +150,6 @@ static NSString * const kKeymasterCypherTextKey = @"cypherText";
     if (*error) return NO;
 
     [json enumerateKeysAndObjectsUsingBlock:^(NSString *accountKey, NSString *credString, BOOL *stop) {
-        NSLog(@"adding %@ for account %@", credString, accountKey);
         [self setCredentials:credString forAccountName:accountKey error:error];
         if (*error) *stop = YES;
     }];

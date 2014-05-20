@@ -1,18 +1,32 @@
 //
-//  AppDelegate.m
+//  CDOAppDelegate.m
 //  CDOCredentialsManagerDemo
 //
-//  Created by Norm Barnard on 5/5/14.
+//  Created by Norm Barnard on 5/19/14.
 //  Copyright (c) 2014 Clamdango. All rights reserved.
 //
 
-#import "AppDelegate.h"
+#import "CDOCredentialsManager.h"
+#import "CDOAppDelegate.h"
+#import "CDOMainViewController.h"
 
-@implementation AppDelegate
+@implementation CDOAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    self.window.backgroundColor = [UIColor whiteColor];
+    self.window.rootViewController = [[CDOMainViewController alloc] init];
+    
+    CDOCredentialsManager *cm = [[CDOCredentialsManager alloc] initWithServiceName:@"test-service"];
+    NSArray *accounts = [cm  allAccounts];
+    if ([accounts count] == 0) {
+        NSURL *keymasterURL = [[NSBundle mainBundle] URLForResource:@"test-crypto" withExtension:@"json"];
+        NSError *error;
+        [cm importCredentialsFromKeymasterFileAtURL:keymasterURL error:&error];
+        NSAssert(error == nil, @"Error importing credentials: %@", error);
+    }
+    [self.window makeKeyAndVisible];
     return YES;
 }
 							

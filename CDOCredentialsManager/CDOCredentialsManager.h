@@ -21,7 +21,7 @@
 - (void)purgeAllAccounts;
 - (void)deleteCredentialsForAccountName:(NSString *)accountName;
 
-- (NSArray *)allAccountNames;
+- (NSArray *)allAccounts;
 
 - (BOOL)importCredentialsFromKeymasterFileAtURL:(NSURL *)fileURL error:(NSError * __autoreleasing *)error;
 - (BOOL)importCredentialsFromKeymasterFileAtURL:(NSURL *)fileURL key:(NSUUID *)cypherKey error:(NSError * __autoreleasing *)error;
